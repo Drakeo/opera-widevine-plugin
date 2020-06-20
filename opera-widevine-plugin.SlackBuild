@@ -31,7 +31,7 @@ fi
 
 PRGNAM=opera-widevine-plugin
 VERSION=$(date +'%m-%d-%y')
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_SBo}
 
 
@@ -89,7 +89,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ar -x google-chrome-stable_current_amd64.deb
 tar xvf data.tar.xz
 mkdir -p $PKG/opt/google/chrome
-cp -rf $build/opt/google/chrome/libwidevinecdm.so $PKG/opt/google/chrome
+cp -rf $build/opt/google/chrome/WidevineCdm $PKG/opt/google/chrome/
 cat > slack-desc <<EOF
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
